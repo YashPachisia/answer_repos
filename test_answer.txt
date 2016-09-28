@@ -1,0 +1,22 @@
+<html>
+<body>
+<!--Creating a form and taking the name in the inout field-->
+<form action="" method="post">
+Name: <input type="text" name="name"><br>
+<input type="submit">
+</form>
+
+</body>
+</html>
+
+<!--starting php-->
+<?php
+//checking if submit button was clicked
+if(isset($_POST['submit']))
+{
+//taking the input name in variable name
+	$name=$_POST['name'];
+//printing name and random number using mt_rand() function
+	echo $name.''.mt_rand(6,15); 	
+}
+?>
